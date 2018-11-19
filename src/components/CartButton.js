@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const CartButton = (props) => {
-    return (
-        <div 
-            className="btn"
-            onClick={props.onClick}>
-            {props.children}
-        </div>
-    )
+export default class CartButton extends Component {
+
+    render() {
+        return (
+            <div
+                className="btn"
+                onClick={this.props.onClick}>
+                {this.props.children}
+            </div>
+        )
+    }
 };
-
-export default CartButton;

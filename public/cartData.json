@@ -1,0 +1,13 @@
+{
+    "items":[
+      {"id":1,"name":"Large Hadron Collider","brand":"CERN Technologies","quantity":1,"price":200,"imageUrl":"https://gradientjoy.com/100x150?id=27"},
+      {"id":2,"name":"Tetrahedron","brand": "CERN Technologies","quantity":3,"price":50,"imageUrl":"https://gradientjoy.com/100x150?id=49"}
+    ],
+    "totals": {
+      "cartTotal": 350,
+      "discountPercentage": 20,
+      "calculatedDiscount": 70,
+      "orderTotal": 280
+    },
+    "currency": "SEK"
+}

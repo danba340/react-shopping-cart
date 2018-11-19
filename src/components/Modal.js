@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'react-emotion';
+import ModalCloseButton from './ModalCloseButton';
 
 const ModalWrapper = styled('div')`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -19,11 +20,17 @@ const ModalContent = styled('div')`
   background: white;
   box-shadow: 0 2px 10px #00000077;
   width: calc(100% - 40px);
-  max-width: 640px;
-  max-height: 480px;
-  height: calc(100vh - 20px);
+  min-width: 300px;
+  max-width: 480px;
+  min-height: 300px;
+  max-height: calc(100vh - 20px);
   padding: 10px;
   text-align: center;
+`
+
+const ModalInnerWrapper = styled('div')`
+    position: relative;
+    height: 100%;
 `
 
 export default class Modal extends Component {
@@ -35,7 +42,7 @@ export default class Modal extends Component {
         document.addEventListener('keyup', this.keyup, false);
     }
     componentWillUnmount() {
-        document.removeEventListener('keyup', this.keyup, false); 
+        document.removeEventListener('keyup', this.keyup, false);
     }
     keyup = e => {
         if (e.key === 'Escape') {
@@ -49,7 +56,10 @@ export default class Modal extends Component {
         return (
             <ModalWrapper className="modal-wrapper" onClick={this.props.onClose} >
                 <ModalContent className="modal-content" onClick={e => e.stopPropagation()} >
-                    {this.props.children}
+                    <ModalInnerWrapper>
+                        <ModalCloseButton onClick={this.props.onClose} />
+                        {this.props.children}
+                    </ModalInnerWrapper>
                 </ModalContent>
             </ModalWrapper>
         )
