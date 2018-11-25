@@ -20,9 +20,8 @@ const ModalContent = styled('div')`
   background: white;
   box-shadow: 0 2px 10px #00000077;
   width: calc(100% - 40px);
-  min-width: 300px;
+  min-width: 280px;
   max-width: 480px;
-  min-height: 300px;
   max-height: calc(100vh - 20px);
   padding: 10px;
   text-align: center;

@@ -7,7 +7,7 @@ import Modal from './components/Modal';
 import { CSSTransition } from 'react-transition-group';
 
 const CtaWrapper = styled('div')`
-    margin: 12px 0 6px;
+    margin: 6px 0 0;
     display flex;
     justify-content: space-between;
 `
@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CartButton className="transparent" onClick={this.openModal}>Shopping Cart</CartButton>
+        <CartButton className="btn" onClick={this.openModal}>Shopping Cart</CartButton>
           <CSSTransition
             in={this.state.showModal}
             timeout={300}
@@ -33,8 +33,8 @@ class App extends Component {
             <Modal onClose={this.closeModal} >
               <Cart />
               <CtaWrapper>
-                <CartButton className="secondary" onClick={this.closeModal} >Keep Shopping</CartButton>
-                <CartButton className="primary">To Checkout</CartButton>
+                <CartButton className="secondary btn" onClick={this.closeModal} >Keep Shopping</CartButton>
+                <CartButton className="primary btn">To Checkout</CartButton>
               </CtaWrapper>
             </Modal>
           </CSSTransition>

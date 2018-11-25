@@ -1,9 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import { CSSTransition } from 'react-transition-group';
+import styled from 'react-emotion';
 import Spinner from './Spinner';
 import CartProducts from './CartProducts';
 import Totals from './Totals';
+
+
+const CartWrapper = styled('div')`
+    padding: ${props => props.loading ? '50px' : '0'} 0;
+`
 
 
 export default class Cart extends Component {
@@ -38,7 +44,7 @@ export default class Cart extends Component {
             return <div>Your cart is empty.</div>;
         }
         return (
-            <div>
+            <CartWrapper loading={this.state.loading} >
                 { this.state.loading &&
                     <Spinner />
                 }
@@ -53,7 +59,7 @@ export default class Cart extends Component {
                         <Totals data={this.state.cartData} />
                     </Fragment>
                 </CSSTransition>
-            </div>
+            </CartWrapper>
         )
     }
     render() {

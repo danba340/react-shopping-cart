@@ -17,7 +17,7 @@ const Image = styled('img')`
 
 const ProductInfo = styled('div')`
     letter-spacing: 0.02em;
-    font-size: 1.6vmin;
+    font-size: 12px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -27,12 +27,11 @@ const ProductInfo = styled('div')`
 
 const Name = styled('h3')`
     letter-spacing: 0.05em;
-    font-size: 1.8vmin;
     margin: 8px 0 6px;
 `
 
 const Brand = styled('span')`
-    font-size: 1.2vmin;
+    font-size: 10px;
     text-transform: uppercase;
     color: #00000088;
 `
@@ -41,7 +40,9 @@ const Remove = styled('div')`
     flex: 1;
     display: flex;
     align-items: flex-end;
-    font-size: 1.4vmin;
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 const CartProduct = (props) => {

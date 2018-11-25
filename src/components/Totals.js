@@ -3,10 +3,10 @@ import styled from 'react-emotion';
 
 const Wrapper = styled('div')`
     text-align: right;
-    font-size: 1.8vmin;
     margin: 24px 12px 0;
     padding-bottom: 12px;
     border-bottom: 1px solid #00000011;
+    font-size: 12px;
 `
 
 const Row = styled('div')`
@@ -30,7 +30,7 @@ const Totals = (props) => {
                 <span>{ totals.discountPercentage }% discount on your order</span><Value>-{ totals.calculatedDiscount } { props.data.currency }</Value>
             </Row>
             <Row>
-                <span>Free shipping on all physics products</span><Value>0 { props.data.currency }</Value>
+                <span>Free shipping on small particles</span><Value>0 { props.data.currency }</Value>
             </Row>
             <Row>
                 <span>Order total</span><Value> { totals.orderTotal } { props.data.currency }</Value>

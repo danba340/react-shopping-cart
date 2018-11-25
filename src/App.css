@@ -8,18 +8,25 @@
 
 h2 {
   margin: 12px 0 18px;
-  font-size: 2.2vmin;
 }
 
 .btn {
-  line-height: 34px;
+  font-size: 12px;
+  line-height: 2.4;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 1.6vmin;
   text-transform: uppercase;
   padding: 0 12px;
   display: inline-block;
   letter-spacing: 0.05em;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.btn.primary {
+  broder: none; 
+  background: #333;
+  color: white;
 }
 
 .modal-enter {

@@ -9,8 +9,6 @@ const Wrapper = styled('div')`
 
 const QuantityValue = styled('div')`
     margin: 0 6px 2px;
-    font-size: 2.0vmin;
-    line-height: 24px;
     vertical-align: baseline;
 `
 
